@@ -1,55 +1,67 @@
+<!-- @format -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TITULO</title>
-    <script src="./js/funcoes.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-
-    <script type="text/javascript">
-        function slide1(){
-        document.getElementById('id').src="assets/1.jpg";
-        setTimeout("slide2()", 2000)
-        }
-        
-        function slide2(){
-        document.getElementById('id').src="assets/2.jpg";
-        setTimeout("slide3()", 2000)
-        }
-        
-        function slide3(){
-        document.getElementById('id').src="assets/3.jpg";
-        setTimeout("slide1()", 2000)
-        }
-        </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
-<body  onload="slide1()">
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">Titulo</h1>
-            <ul class="navbar">
-                <li class="agora">Home</li>
-                <li>|</li>
-                <li>
-                    <a href="./cadastro.html">Cadastro</a>
-                </li>
-            </ul>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bxl-sketch'></i> 
+                <div class="logo_name"> K-Bling</div>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
         </div>
-    </div>
-    
-    <div><img id="id" height="500px" width="500px"></div>
+        <ul class="nav_list">
+            <li>
+                <a href="#">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-info-circle'></i>
+                    <span class="links_name">Sobre Nós</span>
+                </a>
+                <span class="tooltip">Sobre nós</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-circle'></i>
+                    <span class="links_name">Cadastro</span>
+                </a>
+                <span class="tooltip">Cadastro</span>
+            </li>
+        </ul>
 
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno &hearts;SPTech &copy; 2022</h4>
-        </div>
     </div>
+<div class="img_first">
+    <img src="assets/Shinee-1-of-1-album-promo-image-courtesy-of-SM-Entertainment-e1516257530641.jpg">
+</div>
 
+
+</html>
+<script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+    let searchBtn = document.querySelector(".bx-search");
+
+    btn.onclick = function () {
+        sidebar.classList.toggle("active");
+    };
+
+</script>
 </body>
 
 </html>
