@@ -19,7 +19,7 @@ body{
   top: 0;
   left: 0;
   height: 100%;
-  width: 78px;
+  width: 7%;
   background: #37373a;
   padding: 6px 14px;
   transition: all 0.5s ease;
@@ -159,14 +159,23 @@ body{
 }
 /* ----------------------------------------------Home Content------------------------------------------------------- */
 
+.conteudo {
+  width: 93%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 
 .img_first {
   clip-path: polygon(0 0, 100% 0%, 100% 86%, 0 100%);
   display: flex;
-  align-items: center;
-  height: 338;
-  width: 913;
+  width: 97%;
 }
+
+
 
 
 
