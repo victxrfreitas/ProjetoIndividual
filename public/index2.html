@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="nav">
+        <div class="menu" onclick="openNav()">
+            <div class="sidebar"></div>
+        </div>
+        <div class="logo">
+            K-Bling
+        </div>
+        <div class="cart">
+            <i class='bx bxl-sketch'></i>
+        </div>
+    </div>
+    <div id="myNav" class="nav-overlay">
+        <div class="nav-overlay-content">
+
+            <a href="#">
+                <i class='bx bx-home'></i>Home</a>
+            <a href="#"><i class='bx bxl-gitlab'></i>Sobre Nos</a>
+            <a href="#"><i class='bx bx-user-circle'></i>Login</a>
+            <a href="#"><i class='bx bxs-user-account'></i>Cadastro</a>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    openNav = () => {
+        let nav = document.querySelector('.nav-overlay')
+        let hamb = document.querySelector('.sidebar')
+        nav.classList.toggle('active')
+        hamb.classList.toggle('active')
+    }
+</script>
