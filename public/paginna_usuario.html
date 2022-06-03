@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K BLING </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div>
+        <div class="nav">
+            <div class="menu" onclick="openNav()">
+                <div class="sidebar"></div>
+            </div>
+            <div class="logo">
+                K Bling
+            </div>
+            <div class="cart">
+                <i class='bx bxl-sketch'></i>
+            </div>
+        </div>
+        <div id="myNav" class="nav-overlay">
+            <div class="nav-overlay-content">
+
+                <a href="index.html"><i class='bx bx-home'></i> Home</a><br>
+                <a href="#"><i class='bx bxl-gitlab'></i> Membros</a><br>
+                <a href="login.html"><i class='bx bx-user-circle'></i> Login</a><br>
+                <a href="cadastro.html"><i class='bx bxs-user-account'></i> Cadastro</a><br>
+            </div>
+        </div>
+    </div>
+    <!-- _________________________________________ Conteudo _____________________________________________________ -->
+
+
+    <div class="conteudo_usuario">
+        <div class="card_u">
+            <h4>Qual seu album favorito do SHINee?</h4>
+            <div class="pesquisa">
+                <div class="pes_1">
+                    <img src="assets/Pesquisa/Albuns/1Replay.jpg"> Replay
+                    <img src="assets/Pesquisa/Albuns/2ShineeWold.jpg"> The SHINee World
+                    <img src="assets/Pesquisa/Albuns/3Romeo.png"> ROMEO
+                    <img src="assets/Pesquisa/Albuns/4-2009YearOfUs.jpg"> 2009, Year Of Us
+                    <img src="assets/Pesquisa/Albuns/5Lucifer.jpg"> Lucifer
+                    <img src="assets/Pesquisa/Albuns/6Sherlock.jpg"> Sherlock
+                </div>
+                <div class="pes_2">
+                <img src="assets/Pesquisa/Albuns/7MisconceptionsOfUs.png"> Misconceptions Of Us
+                <img src="assets/Pesquisa/Albuns/8Everybody.jpg"> Everybody
+                <img src="assets/Pesquisa/Albuns/Shinee-Odd.jpg"> Odd
+                <img src="assets/Pesquisa/Albuns/9-1of1.jpg"> 1 Of 1
+                <img src="assets/Pesquisa/Albuns/10TheStoryOfLight.png"> The Story Of Light
+                <img src="assets/Pesquisa/Albuns/11DontCallMe.png"> Don't Call Me
+            </div>
+            </div>
+        </div>
+        <div class="card_u">
+            Qual sua musica favorita do "Don't Call Me"?
+        </div>
+    </div>
+
+
+
+    <!-- _________________________________________ Conteudo _____________________________________________________ -->
+    <div class="footer">
+        <div class="footerContainer">
+            <h4>Feito com amor por um fã, Maciel Victor Freitas &copy; 2022</h4>
+            <h6>v1.0.1</h6>
+        </div>
+        <div class="socialMedia">
+            <i class='bx bxl-instagram'></i>
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-twitter'></i>
+            <i class='bx bxl-tiktok'></i>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var album_escolhido = 0;
+
+    openNav = () => {
+        let nav = document.querySelector('.nav-overlay')
+        let hamb = document.querySelector('.sidebar')
+        nav.classList.toggle('active')
+        hamb.classList.toggle('active')
+    }
+    var vt_pesquisa = document.querySelectorAll(".pes_1 img");
+     vt_pesquisa.forEach((item) => {
+         item.addEventListener("click", () => {
+            album_escolhido = 1
+         })
+     });
+   
+
+    function publicar() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+
+        var corpo = {
+            titulo: form_postagem.titulo.value,
+            descricao: form_postagem.descricao.value
+        }
+
+        fetch(`/avisos/publicar/${idUsuario}`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+                window.location = "/dashboard/mural.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+
+    }
+</script>
