@@ -2,6 +2,11 @@ CREATE DATABASE kbling;
 
 USE kbling;
 
+CREATE TABLE album (
+idAlbum INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45)
+);
+
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
@@ -11,10 +16,6 @@ CREATE TABLE usuario (
 		FOREIGN KEY (fkAlbum) references album(idAlbum)
 );
 
-CREATE TABLE album (
-idAlbum INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(45)
-);
 
 insert into album (nome) values
 ('Replay'),
@@ -31,3 +32,5 @@ insert into album (nome) values
 ("Don't Call Me");
 
 select * from album;
+
+select * from usuario;
