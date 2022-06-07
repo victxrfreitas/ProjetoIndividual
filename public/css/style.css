@@ -213,6 +213,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.39);
   font-size: 0px;
+  background-color: #bae0d6a8;
 }
 
 .video_first {
@@ -220,7 +221,7 @@ body {
 }
 
 .div1 {
-  background-color: transparent;
+  background-color: #bae0d6a8;
   height: 500px;
   color: #4A5955;
   display: flex;
@@ -228,16 +229,17 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+  margin-top: 244px;
 }
 
 .social {
-  background-color: #ffffff;
+  background-color: #bae0d6a8;
   display: flex;
 }
 
 .social .container {
   justify-content: center;
-
+  background-color: #bae0d6a8;
 }
 
 .box img {
@@ -248,6 +250,7 @@ body {
 
 .social .container .boxes {
   display: flex;
+  background-color: #bae0d6a8;
 }
 
 .social p {
@@ -266,6 +269,7 @@ body {
   font-size: 20px;
   margin-top: 0px;
   justify-content: space-around;
+  background-color: #fff;
 }
 
 .icons {
@@ -285,6 +289,24 @@ body {
   font-weight: bold;
   animation: transform .2s ease-in-out;
 }
+
+.news {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #73D9BC solid 3px;
+    height: 339px;
+    width: 950px;
+    padding: 5px;
+    font-size: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding: 28px;
+    justify-content: space-around;
+}
+
 
 /* ------------------------------------------Cadastro------------------------------------------------------- */
 
@@ -465,6 +487,7 @@ button {
   align-items: center;
   justify-content: space-between;
   border: #2F594D solid 10px;
+  margin-top: 200px;
 }
 
 .footer .footerContainer {
@@ -591,16 +614,16 @@ button {
 /* -----------------------------------------------MEMBROS------------------------------------------------------- */
 
 .card_members {
-    background-color: white;
-    display: flex;
-    height: 435px;
-    width: 400px;
-    border: #73D9BC solid 1px;
-    text-align: center;
-    font-size: 13px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  background-color: white;
+  display: flex;
+  height: 435px;
+  width: 400px;
+  border: #73D9BC solid 1px;
+  text-align: center;
+  font-size: 13px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .card_members img {
