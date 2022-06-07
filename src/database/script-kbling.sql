@@ -31,6 +31,8 @@ insert into album (nome) values
 ('The Story Of Light'),
 ("Don't Call Me");
 
+INSERT INTO usuario (nome, email, senha, fkAlbum) VALUES ('mayla', 'mayla@email.com', '123', 2);
+
 select * from album;
 
 select * from usuario;

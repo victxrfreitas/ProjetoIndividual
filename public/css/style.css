@@ -487,6 +487,7 @@ button {
   margin-top: 80px;
   margin-bottom: 40px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card_u {
@@ -562,18 +563,44 @@ button {
   margin: 30px;
 }
 
+.graph {
+  height: 700px;
+  width: 700px;
+}
+
+.conteudo_grafico {
+  height: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  flex-direction: column;
+}
+
+.card_graf {
+  background-color: #fff;
+  border: #73D9BC 3px solid;
+  height: 440px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* -----------------------------------------------MEMBROS------------------------------------------------------- */
 
 .card_members {
-  background-color: white;
-  display: flex;
-  height: 500px;
-  width: 400px;
-  border: #73D9BC solid 3px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+    background-color: white;
+    display: flex;
+    height: 435px;
+    width: 400px;
+    border: #73D9BC solid 1px;
+    text-align: center;
+    font-size: 13px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .card_members img {
@@ -582,7 +609,7 @@ button {
   border-radius: 50%;
 }
 
-.card_members i{
+.card_members i {
   font-size: 50px;
   color: #58A690;
 }
